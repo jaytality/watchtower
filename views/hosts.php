@@ -56,19 +56,19 @@ foreach($data['hosts'] as $host) {
       <div class="row" style="font-size: 1.2rem; ">
         <!-- CPU -->
         <div class="col-xs-4 text-center">
-          <span style="font-size: 1.6rem;">CPU</span><br />
+          <span style="font-size: 1.6rem;">USED CPU</span><br />
           <?=$host['cpuLoad']. ' %'?>
         </div>
 
         <!-- MEMORY -->
         <div class="col-xs-4 text-center">
-          <span style="font-size: 1.6rem;">RAM</span><br />
+          <span style="font-size: 1.6rem;">FREE RAM</span><br />
           <?=$host['memory']['free'].' <span style="color: #777; ">'.$host['memory']['total'].'</span>'?>
         </div>
 
         <!-- DISK -->
         <div class="col-xs-4 text-center">
-          <span style="font-size: 1.6rem;">HDD</span><br />
+          <span style="font-size: 1.6rem;">USED HDD</span><br />
           <?=$host['diskUsage'].' <span style="color: #777; ">'.$host['diskTotal'].'</span>'?>
         </div>
       </div>
