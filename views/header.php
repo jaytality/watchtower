@@ -12,11 +12,11 @@
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
 	<!-- watchtower javascript -->
-	<script src="<?=$home . 'assets/js/watchtower.js'?>?<?=uniqid()?>"></script>
+	<script src="<?=$baseUrl . 'assets/js/watchtower.js'?>?<?=uniqid()?>"></script>
 
 	<!-- watchtower css -->
-	<link rel="stylesheet" href="<?=$home . 'assets/css/theme.css'?>?<?=uniqid()?>">
-	<link rel="stylesheet" href="<?=$home . 'assets/css/watchtower.css'?>?<?=uniqid()?>">
+	<link rel="stylesheet" href="<?=$baseUrl . 'assets/css/theme.css'?>?<?=uniqid()?>">
+	<link rel="stylesheet" href="<?=$baseUrl . 'assets/css/watchtower.css'?>?<?=uniqid()?>">
 
 </head>
 
