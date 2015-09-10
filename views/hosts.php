@@ -21,7 +21,7 @@ foreach($data['hosts'] as $host) {
           <th>
             UPTIME
           </th>
-          <td>
+          <td style="text-transform: none; ">
             <?=$host['uptime']?>
           </td>
           <td class="text-right">
