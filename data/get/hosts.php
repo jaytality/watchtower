@@ -148,16 +148,19 @@ try {
         // EGRESS (upload)
         $data['hosts'][$host['id']]['egress'] = 0;
         $egress = $api->itemGet(array(
-            "output" => "extend",
-            "hostids" => $host['id'],
+            "output"                 => "extend",
+            "hostids"                => $host['id'],
             "searchWildcardsEnabled" => true,
-            "search" => array(
-                "key_" => "net.if.out[*]",
-            )
+            "search"                 => array(
+                                            "key_" => "net.if.out[*]",
+                                        )
         ));
         foreach($egress as $out) {
             $data['hosts'][$host['id']]['egress'] += $out->lastvalue;
         }
+
+        $data['totals']['ingress'] += $data['hosts'][$host['id']]['ingress'];
+        $data['totals']['egress']  += $data['hosts'][$host['id']]['egress'];
     }
 } catch(Exception $e) {
     echo $e->getMessage();
