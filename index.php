@@ -22,6 +22,8 @@ $data = array();
 
 // output
 include(ROOT.'/views/header.php');
+
+include(ROOT.'/data/home.php');
 include(ROOT.'/views/home.php');
 
 // home ajax script
