@@ -1,1 +1,4 @@
-config.php
+sftp-config.json
+app/config.php
+zabbix
+zabbix/

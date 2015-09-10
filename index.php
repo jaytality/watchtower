@@ -1,49 +1,50 @@
 <?php
+// PROJECT: Watchtwoer
+// URL: watchtower.jtiong.com
+// jtiong@jtiong.com
 
+session_start();
+
+// critical, required files!
 define('ROOT',dirname(__FILE__));
 
+require(ROOT.'/app/config.php');
+(@include_once(ROOT.'/app/config.php')) or die("app/config.php required, please copy app/config.default.php to app/config.php and edit as required");
+
+// alternate globals
+define('controllers', ROOT.'/app/controllers');
+define('models', ROOT.'/app/models');
+define('views', ROOT.'/app/views');
+
+// CORE LIBRARIES
+require_once(ROOT.'/core/baseline.php');
+require_once(ROOT.'/core/rb.php');
+
+ini_set('log_errors', 1);
+
 // error logging
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+if($settings['environment'] == 'development') {
+	error_reporting(E_ALL); // comment out to stop error reporting to browser, notices are not reported!
+	ini_set('display_errors', 1);
+} else {
+	error_reporting(E_ALL & ~E_NOTICE); // comment out to stop error reporting to browser, notices are not reported!
+	ini_set('display_errors', 0);
+}
 
-// benchmarking - page loading
-$time = microtime();
-$time = explode(' ', $time);
-$time = $time[1] + $time[0];
-$start = $time;
+// timezone
+date_default_timezone_set($settings['global']['timezone']);
 
-// $settings
-require(ROOT.'/config.php');
-(@include_once(ROOT.'/config.php')) or
-die("config.php required, please copy config.default.php to config.php and edit as required");
+// RedBeanPHP
+R::setup($settings['db']['type'].':host='.$settings['db']['host'].';dbname='.$settings['db']['name'], $settings['db']['user'], $settings['db']['pass']);
+R::ext('xdispense', function( $type ){ return R::getRedBean()->dispense( $type ); }); // allow _ in table names etc.
 
-// load ZabbixApi
-require_once 'lib/ZabbixApi.class.php';
-use ZabbixApi\ZabbixApi;
+// SETUP Baseline core
+$base = new Baseline();
 
-// connect to Zabbix API
-$api = new ZabbixApi($settings['zabbix']['url'], $settings['zabbix']['user'], $settings['zabbix']['pass']);
+// MODELS
+foreach (glob(ROOT."/app/models/*.php") as $filename) { require_once $filename; }
 
-// $data for page
-$data = array();
+// Routing
+include(ROOT.'/routes/routes.php');
 
-// output
-include(ROOT.'/views/header.php');
-
-include(ROOT.'/data/home.php');
-include(ROOT.'/views/home.php');
-
-// home ajax script
-?>
-<script type="text/javascript">
-  function updateHosts(){
-    $('#hosts').load('data/home.php');
-  }
-  setInterval( "updateHosts()", 10000 );
-</script>
-<?php
-
-include(ROOT.'/views/footer.php');
-
-// clearing $data
-$data = array();
+R::close();
