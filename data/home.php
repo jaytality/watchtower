@@ -7,7 +7,7 @@ define('ROOT',dirname(__FILE__));
 require_once('../config.php');
 
 // load ZabbixApi
-require_once 'lib/ZabbixApi.class.php';
+require_once '../lib/ZabbixApi.class.php';
 use ZabbixApi\ZabbixApi;
 
 // connect to Zabbix API
