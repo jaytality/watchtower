@@ -15,7 +15,7 @@ $api = new ZabbixApi($settings['zabbix']['url'], $settings['zabbix']['user'], $s
 function secondsToTime($seconds) {
     $dtF = new DateTime("@0");
     $dtT = new DateTime("@$seconds");
-    return $dtF->diff($dtT)->format('%a D %h H %i M %s S');
+    return $dtF->diff($dtT)->format('%ad %hh %im %ss');
 }
 
 function bytesToSize($bytes, $precision = 2)
