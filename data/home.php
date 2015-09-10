@@ -164,6 +164,3 @@ try {
 } catch(Exception $e) {
     echo $e->getMessage();
 }
-
-// include home views
-include('views/home.php');
