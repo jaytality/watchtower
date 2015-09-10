@@ -17,6 +17,7 @@ $settings = array(
 	// GLOBAL SITE SETTINGS
 	"global" => array(
 		"name"     => "WEBSITE NAME",
+		"network"  => "NETWORK NAME",
 		"url"      => "WEBSITE URL",
 		"basedir"  => "SUBDIRECTORY IF NEEDED (NO TRAILING /)",
 		"timezone" => "TIMEZONE YOU MIGHT BE IN",
