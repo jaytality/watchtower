@@ -19,3 +19,16 @@ ini_set('display_errors', 1);
 
 // output
 include(ROOT.'/views/header.php');
+include(ROOT.'/views/home.php');
+
+// home ajax script
+?>
+<script type="text/javascript">
+  function updateHosts(){
+      $('#hosts').load('data/home.php');
+  }
+  setInterval( "updateHosts()", 10000 );
+</script>
+<?php
+
+include(ROOT.'/views/footer.php');
