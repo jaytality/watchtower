@@ -4,7 +4,7 @@ error_reporting(E_ALL); // comment out to stop error reporting to browser, notic
 ini_set('display_errors', 1);
 
 define('ROOT',dirname(__FILE__));
-require_once('config.php');
+require_once('../config.php');
 
 // load ZabbixApi
 require_once 'lib/ZabbixApi.class.php';
