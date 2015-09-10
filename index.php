@@ -17,6 +17,9 @@ require(ROOT.'/config.php');
 (@include_once(ROOT.'/config.php')) or
 die("config.php required, please copy config.default.php to config.php and edit as required");
 
+// $data for page
+$data = array();
+
 // output
 include(ROOT.'/views/header.php');
 include(ROOT.'/views/home.php');
@@ -32,3 +35,6 @@ include(ROOT.'/views/home.php');
 <?php
 
 include(ROOT.'/views/footer.php');
+
+// clearing $data
+$data = array();

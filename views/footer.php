@@ -34,6 +34,3 @@
 
 </body>
 </html>
-<?php
-
-$data = array();
