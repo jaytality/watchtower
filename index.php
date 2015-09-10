@@ -39,7 +39,7 @@ include(ROOT.'/views/home.php');
   function updateHosts(){
     $('#hosts').load('data/home.php');
   }
-  setInterval( "updateHosts()", 500 );
+  setInterval( "updateHosts()", 1000 );
 </script>
 <?php
 
