@@ -57,14 +57,14 @@ foreach($data['hosts'] as $host) {
         <!-- ingress (downloads) -->
         <div class="col-sm-6">
           <span style="color: #00ff00; ">
-            <?=$host['totals']['ingress']?> <i class="icon-down-dir"></i>
+            <?=$host['ingress']?> <i class="icon-down-dir"></i>
           </span>
         </div>
 
         <!-- egress (uploads) -->
         <div class="col-sm-6 text-right">
           <span style="color: #ff0000; ">
-            <?=$host['totals']['egress']?> <i class="icon-up-dir"></i>
+            <?=$host['egress']?> <i class="icon-up-dir"></i>
           </span>
         </div>
       </div>
