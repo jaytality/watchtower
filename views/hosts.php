@@ -53,6 +53,21 @@ foreach($data['hosts'] as $host) {
         </tr>
       </table>
       <div class="clearfix"></div>
+      <div class="row">
+        <!-- ingress (downloads) -->
+        <div class="col-sm-6">
+          <span style="color: #00ff00; ">
+            <?=$host['totals']['ingress']?> <i class="icon-down-dir"></i>
+          </span>
+        </div>
+
+        <!-- egress (uploads) -->
+        <div class="col-sm-6 text-right">
+          <span style="color: #ff0000; ">
+            <?=$host['totals']['egress']?> <i class="icon-up-dir"></i>
+          </span>
+        </div>
+      </div>
       <div class="row" style="font-size: 1.2rem; ">
         <!-- CPU -->
         <div class="col-xs-4 text-center">
