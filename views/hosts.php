@@ -63,13 +63,13 @@ foreach($data['hosts'] as $host) {
         <!-- MEMORY -->
         <div class="col-xs-4 text-center">
           <span style="font-size: 1.6rem;">RAM</span><br />
-          <?=$host['memory']['free'].' / '.$host['memory']['total']?>
+          <?=$host['memory']['free'].' <span style="color: #777; ">'.$host['memory']['total'].'</span>'?>
         </div>
 
         <!-- DISK -->
         <div class="col-xs-4 text-center">
           <span style="font-size: 1.6rem;">HDD</span><br />
-          <?=$host['diskUsage'].' / '.$host['diskTotal']?>
+          <?=$host['diskUsage'].' <span style="color: #777; ">'.$host['diskTotal'].'</span>'?>
         </div>
       </div>
     </div>

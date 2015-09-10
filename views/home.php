@@ -16,7 +16,7 @@
 			<span style="font-size: 2rem; float: left; ">ONLINE</span>
 			<span style="font-size: 2rem; float: right; text-align: right; ">
 				<?=$data['totals']['online']?> /
-				<span style="color: #ccc; "><?=$data['totals']['hosts']?></span>
+				<span style="color: #777; "><?=$data['totals']['hosts']?></span>
 			</span>
 		</div>
 		<div class="col-sm-10">
