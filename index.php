@@ -30,8 +30,6 @@ $data = array();
 // output
 include(ROOT.'/views/header.php');
 
-include(ROOT.'/data/home.php');
-
 // home ajax script
 ?>
 
