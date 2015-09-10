@@ -17,6 +17,13 @@ require(ROOT.'/config.php');
 (@include_once(ROOT.'/config.php')) or
 die("config.php required, please copy config.default.php to config.php and edit as required");
 
+// load ZabbixApi
+require_once '/lib/ZabbixApi.class.php';
+use ZabbixApi\ZabbixApi;
+
+// connect to Zabbix API
+$api = new ZabbixApi($settings['zabbix']['url'], $settings['zabbix']['user'], $settings['zabbix']['pass']);
+
 // $data for page
 $data = array();
 

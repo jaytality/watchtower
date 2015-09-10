@@ -1,12 +1,5 @@
 <?php
 
-// load ZabbixApi
-require_once '/lib/ZabbixApi.class.php';
-use ZabbixApi\ZabbixApi;
-
-// connect to Zabbix API
-$api = new ZabbixApi($settings['zabbix']['url'], $settings['zabbix']['user'], $settings['zabbix']['pass']);
-
 function secondsToTime($seconds) {
     $dtF = new DateTime("@0");
     $dtT = new DateTime("@$seconds");
