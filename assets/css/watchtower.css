@@ -1,0 +1,60 @@
+/* CSS RESET */
+body { margin: 0; padding: 0; font-size: 100%; line-height: 1; }
+
+/*
+	WATCHTOWER STYLING
+*/
+
+body {
+	background: #000 url("../img/background.png") repeat;
+	color: #dedede;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 300;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+}
+
+hr {
+	border-top: 1px dashed cyan;
+}
+
+h1 {
+	font-family: 'Dosis', sans-serif;
+	color: #fff;
+	font-weight: normal;
+}
+
+/* TABLES */
+table {
+	font-size: 1.6rem;
+}
+
+th {
+	color: #00ccff;
+	text-align: right;
+}
+
+.table-borderless td, .table-borderless th {
+	border: none !important;
+}
+
+/* HOSTS */
+.well {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+.host {
+	border-top: 1px solid rgb(159, 238, 255);
+	margin-top: 1.5rem;
+	background: none;
+}
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
