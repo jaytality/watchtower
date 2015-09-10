@@ -29,15 +29,21 @@ foreach($data['hosts'] as $host) {
               if(isset($host['os'])) {
                 switch($host['os']) {
                   case "Windows":
-                    echo "WIN";
+                    ?>
+                      <i class="icon-windows"></i>
+                    <?php
                   break;
 
                   case "Linux":
-                    echo "LIN";
+                    ?>
+                      <i class="icon-linux"></i>
+                    <?php
                   break;
 
                   case "Darwin":
-                    echo "MAC";
+                    ?>
+                      <i class="icon-appstore"></i>
+                    <?php
                   break;
                 }
               }
