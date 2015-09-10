@@ -30,7 +30,7 @@ $data = array();
 // output
 include(ROOT.'/views/header.php');
 
-// home ajax script
+include(ROOT.'/data/home.php');
 ?>
 
 <div class="container-fluid">
@@ -48,14 +48,14 @@ include(ROOT.'/views/header.php');
 			</span>
 		</div>
 		<div id="hosts" class="col-sm-10">
-			include(ROOT.'/views/hosts.php');
+			<?php include(ROOT.'/views/hosts.php'); ?>
 		</div>
 	</div>
 </div>
 
 <script type="text/javascript">
   function updateHosts(){
-    $('#hosts').load('data/home.php');
+    $('#hosts').load('data/hosts.php');
   }
   setInterval( "updateHosts()", 10000 );
 </script>
