@@ -47,7 +47,8 @@ th {
 }
 
 .host {
-	border-top: 1px solid rgb(159, 238, 255);
+	border-top: 1px solid cyan;
+	border-bottom: 2px solid cyan;
 	margin-top: 1.5rem;
 	background: none;
 }
