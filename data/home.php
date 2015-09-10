@@ -3,10 +3,10 @@
 error_reporting(E_ALL); // comment out to stop error reporting to browser, notices are not reported!
 ini_set('display_errors', 1);
 
-require_once('../config.php');
+require_once('./config.php');
 
 // load ZabbixApi
-require_once('../lib/ZabbixApi.class.php');
+require_once('./lib/ZabbixApi.class.php');
 use ZabbixApi\ZabbixApi;
 
 // connect to Zabbix API
