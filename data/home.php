@@ -166,4 +166,4 @@ try {
 }
 
 // include home views
-include('../views/home.php');
+include('views/home.php');
