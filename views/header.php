@@ -16,6 +16,8 @@
 
 	<!-- watchtower css -->
 	<link rel="stylesheet" href="<?=$baseUrl . 'assets/css/theme.css'?>?<?=uniqid()?>">
+	<link rel="stylesheet" href="<?=$baseUrl . 'assets/css/animation.css'?>?<?=uniqid()?>">
+	<link rel="stylesheet" href="<?=$baseUrl . 'assets/css/watchtower-icons.css'?>?<?=uniqid()?>">
 	<link rel="stylesheet" href="<?=$baseUrl . 'assets/css/watchtower.css'?>?<?=uniqid()?>">
 
 </head>
