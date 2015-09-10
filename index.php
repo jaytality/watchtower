@@ -1,21 +1,21 @@
 <?php
 
+define('ROOT',dirname(__FILE__));
+
+// error logging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // benchmarking - page loading
 $time = microtime();
 $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $start = $time;
 
-define('ROOT',dirname(__FILE__));
-
 // $settings
 require(ROOT.'/config.php');
 (@include_once(ROOT.'/config.php')) or
 die("config.php required, please copy config.default.php to config.php and edit as required");
-
-// error logging
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 // output
 include(ROOT.'/views/header.php');
@@ -25,7 +25,7 @@ include(ROOT.'/views/home.php');
 ?>
 <script type="text/javascript">
   function updateHosts(){
-      $('#hosts').load('data/home.php');
+    $('#hosts').load('data/home.php');
   }
   setInterval( "updateHosts()", 10000 );
 </script>
