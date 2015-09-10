@@ -1,7 +1,7 @@
 <?php
 
 // load ZabbixApi
-require_once '../../../lib/ZabbixApi.class.php';
+require_once '../lib/ZabbixApi.class.php';
 use ZabbixApi\ZabbixApi;
 
 // connect to Zabbix API
