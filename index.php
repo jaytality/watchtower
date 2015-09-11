@@ -37,7 +37,7 @@ include(ROOT.'/data/home.php');
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-2" style="border-bottom: 2px solid cyan; ">
+		<div class="col-sm-2">
 			<h1><?=$settings['global']['name']?></h1>
 			<p>
 				<?=$settings['global']['network']?>
