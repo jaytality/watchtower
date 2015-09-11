@@ -52,11 +52,11 @@ include(ROOT.'/data/home.php');
 			<hr />
 			<!-- ingress (downloads) -->
 			<span style="color: #00ff00; font-size: 1.6rem; float: left; ">
-				<?=bytesToSize($data['totals']['ingress'])?> <i class="icon-down-dir"></i>
+				<?=bytesToSize($data['totals']['ingress']).'ps'?> <i class="icon-down-dir"></i>
 			</span>
 			<!-- egress (uploads) -->
 			<span style="color: #ff0000; font-size: 1.6rem; float: right; text-align: right; ">
-				<i class="icon-up-dir"></i> <?=bytesToSize($data['totals']['egress'])?>
+				<i class="icon-up-dir"></i> <?=bytesToSize($data['totals']['egress']).'ps'?>
 			</span>
 		</div>
 		<div id="hosts" class="col-sm-10">
