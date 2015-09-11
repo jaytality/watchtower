@@ -10,3 +10,9 @@ Primary goals are:
 * monitoring client hardware
 
 The site runs by collecting data from the ZABBIX Api
+
+## Notes
+
+* Working installation of ZABBIX with a front-end
+* Minimum display is 1440 x 900 bootstrap should handle smaller displays though...
+* Tested and Developed on ZABBIX 2.2.2
