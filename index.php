@@ -24,6 +24,8 @@ use ZabbixApi\ZabbixApi;
 // connect to Zabbix API
 $api = new ZabbixApi($settings['zabbix']['url'], $settings['zabbix']['user'], $settings['zabbix']['pass']);
 
+include_once('lib/conversion.php');
+
 // $data for page
 $data = array();
 
@@ -51,11 +53,11 @@ include(ROOT.'/data/home.php');
 			<br />
 			<!-- ingress (downloads) -->
 			<span style="color: #00ff00; font-size: 1.6rem; float: left; ">
-				<?=$data['totals']['ingress']?> <i class="icon-down-dir"></i>
+				<?=bytesToSize($data['totals']['ingress'])?> <i class="icon-down-dir"></i>
 			</span>
 			<!-- egress (uploads) -->
 			<span style="color: #ff0000; font-size: 1.6rem; float: right; text-align: right; ">
-				<?=$data['totals']['egress']?> <i class="icon-up-dir"></i>
+				<?=bytesToSize($data['totals']['egress'])?> <i class="icon-up-dir"></i>
 			</span>
 		</div>
 		<div id="hosts" class="col-sm-10">
