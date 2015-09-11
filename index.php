@@ -33,6 +33,8 @@ $data = array();
 include(ROOT.'/views/header.php');
 
 include(ROOT.'/data/home.php');
+
+include(ROOT.'/views/hosts.php');
 ?>
 
 <script type="text/javascript">
