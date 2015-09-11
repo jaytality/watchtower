@@ -68,7 +68,7 @@ foreach($data['hosts'] as $host) {
 					</span>
 				</div>
 			</div>
-
+			<hr />
 			<div class="row" style="font-size: 1.2rem; ">
 				<!-- CPU -->
 				<div class="col-xs-4 text-center">

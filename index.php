@@ -37,7 +37,7 @@ include(ROOT.'/data/home.php');
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-2">
+		<div class="col-sm-2" style="border-bottom: 2px solid cyan; ">
 			<h1><?=$settings['global']['name']?></h1>
 			<p>
 				<?=$settings['global']['network']?>
@@ -49,8 +49,7 @@ include(ROOT.'/data/home.php');
 				<span style="color: #ccc; "><?=$data['totals']['hosts']?></span>
 			</span>
 			<div class="clearfix"></div>
-			<br />
-			<br />
+			<hr />
 			<!-- ingress (downloads) -->
 			<span style="color: #00ff00; font-size: 1.6rem; float: left; ">
 				<?=bytesToSize($data['totals']['ingress'])?> <i class="icon-down-dir"></i>
