@@ -57,7 +57,7 @@ include(ROOT.'/data/home.php');
 			</span>
 			<!-- egress (uploads) -->
 			<span style="color: #ff0000; font-size: 1.6rem; float: right; text-align: right; ">
-				<?=bytesToSize($data['totals']['egress'])?> <i class="icon-up-dir"></i>
+				<i class="icon-up-dir"></i> <?=bytesToSize($data['totals']['egress'])?>
 			</span>
 		</div>
 		<div id="hosts" class="col-sm-10">

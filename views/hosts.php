@@ -64,7 +64,7 @@ foreach($data['hosts'] as $host) {
 				<!-- egress (uploads) -->
 				<div class="col-sm-6 text-right">
 					<span style="color: #ff0000; ">
-					<?=bytesToSize($host['egress'])?> <i class="icon-up-dir"></i>
+					<i class="icon-up-dir"></i> <?=bytesToSize($host['egress'])?>
 					</span>
 				</div>
 			</div>
