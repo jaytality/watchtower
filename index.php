@@ -47,6 +47,8 @@ include(ROOT.'/data/home.php');
 				<span style="color: #ccc; "><?=$data['totals']['hosts']?></span>
 			</span>
 			<div class="clearfix"></div>
+			<br />
+			<br />
 			<!-- ingress (downloads) -->
 			<span style="color: #00ff00; font-size: 1.6rem; float: left; ">
 				<?=$data['totals']['ingress']?> <i class="icon-down-dir"></i>
