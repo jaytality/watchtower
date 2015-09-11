@@ -25,6 +25,10 @@ h1 {
 	font-weight: normal;
 }
 
+.navbar-fixed-bottom {
+	line-height: 3rem;
+}
+
 /* TABLES */
 table {
 	font-size: 1.6rem;
