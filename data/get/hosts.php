@@ -111,11 +111,17 @@ try {
         $data['hosts'][$host['id']]['diskTotal'] = bytesToSize($data['hosts'][$host['id']]['diskTotal']);
 
         // AVAILABLE MEMORY
+        if($data['hosts'][$host['id']]['os'] == "Windows") {
+            $key = "vm.memory.size[free]";
+        } else {
+            $key = "vm.memory.size[available]";
+        }
+
     	$memory = $api->itemGet(array(
 			"output"  => "extend",
 			"hostids" => $host['id'],
 			"search"  => array(
-				"key_" => "vm.memory.size[available]",
+				"key_" => $key,
 			)
 		));
 		$data['hosts'][$host['id']]['memory']['free'] = isset($memory[0]->lastvalue) ? bytesToSize($memory[0]->lastvalue) : 'n/a';
