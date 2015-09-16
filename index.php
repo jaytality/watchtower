@@ -34,7 +34,6 @@ $data = array();
 include(ROOT.'/views/header.php');
 
 if((!isset($_SESSION['auth'])) || ($_SESSION['auth'] != true)) {
-    // login stuff
     include(ROOT.'/views/login.php');
 } else {
     include(ROOT.'/data/home.php');
