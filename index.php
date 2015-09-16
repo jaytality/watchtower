@@ -30,6 +30,12 @@ include_once('lib/conversion.php');
 // $data for page
 $data = array();
 
+if(isset($_POST['password'])) {
+    if($_POST['password'] == $settings['password']) {
+        $_SESSION['auth'] = true;
+    }
+}
+
 // output
 include(ROOT.'/views/header.php');
 
