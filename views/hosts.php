@@ -22,6 +22,8 @@
 				<span style="color: #ff0000; font-size: 1.6rem; float: right; text-align: right; ">
 					<i class="icon-up-dir"></i> <?=bytesToSize($data['totals']['egress']).'ps'?>
 				</span>
+				<hr />
+				<a href="<?=$baseUrl?>?action=logout">Log Out</a>
 			</div>
 			<div class="col-sm-10">
 				<?php

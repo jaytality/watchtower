@@ -30,6 +30,21 @@ include_once('lib/conversion.php');
 // $data for page
 $data = array();
 
+// logging out
+if(isset($_GET['action'])) {
+    if($_GET['action'] == 'logout') {
+    	$_SESSION = [];
+    	if(isset($_COOKIE[session_name()])) {
+    		setcookie(session_name(), '', time()-42000, '/');
+    	}
+    	session_destroy();
+
+    	// redirect to home page
+    	header('Location: '.$settings['global']['basedir']);        
+    }
+}
+
+// logging in
 if(isset($_POST['password'])) {
     if($_POST['password'] == $settings['password']) {
         $_SESSION['auth'] = true;
