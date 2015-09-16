@@ -2,7 +2,7 @@
     <div class="col-xs-6 col-xs-offset-3">
         <br />
         <br />
-        <form method="POST" class="form-horizontal" action="<?=$config['global']['basedir']?>">
+        <form method="POST" class="form-horizontal" action="<?=$settings['global']['basedir']?>">
             <div class="form-group">
                 <label for="password" class="control-label col-xs-4">Enter Password: </label>
                 <div class="col-xs-8">
