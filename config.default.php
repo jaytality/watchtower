@@ -36,6 +36,8 @@ $settings = array(
 		"pass" => "ZABBIX PASSWORD",
 	),
 
+	"password" => "ACCESS PASSWORD",
+
 );
 
 // determine base directory for routes

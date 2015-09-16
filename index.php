@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 define('ROOT',dirname(__FILE__));
 
@@ -32,18 +33,22 @@ $data = array();
 // output
 include(ROOT.'/views/header.php');
 
-include(ROOT.'/data/home.php');
+if((!isset($_SESSION['auth'])) || ($_SESSION['auth'] != true)) {
+    // login stuff
+    include(ROOT.'/views/login.php');
+} else {
+    include(ROOT.'/data/home.php');
+    include(ROOT.'/views/hosts.php');
 
-include(ROOT.'/views/hosts.php');
-?>
-
-<script type="text/javascript">
-  function updateHosts(){
-    $('#hosts').load('data/hosts.php');
-  }
-  setInterval( "updateHosts()", 10000 );
-</script>
-<?php
+    ?>
+    <script type="text/javascript">
+      function updateHosts(){
+        $('#hosts').load('data/hosts.php');
+      }
+      setInterval( "updateHosts()", 10000 );
+    </script>
+    <?php
+}
 
 include(ROOT.'/views/footer.php');
 
