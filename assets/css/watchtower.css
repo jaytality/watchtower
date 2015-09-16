@@ -65,3 +65,14 @@ th {
     width: 100%;
     height: 60px;
 }
+
+.control-label {
+	font-size: 1.6rem;
+}
+
+.form-control {
+	color: #777;
+	background-color: #364651;
+	border: 1px solid #666;
+	text-transform: uppercase;
+}

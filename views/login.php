@@ -4,15 +4,15 @@
         <br />
         <form action="POST" class="form-horizontal" action="<?=$config['global']['basedir']?>">
             <div class="form-group">
-                <label for="password" class="control-label col-xs-3">Enter Password: </label>
-                <div class="col-xs-9">
+                <label for="password" class="control-label col-xs-4">Enter Password: </label>
+                <div class="col-xs-8">
                     <input type="password" name="password" class="form-control" placeholder="Please enter your password to continue" />
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-xs-3"></label>
-                <div class="col-xs-9">
-                    <button class="btn btn-success">Login</button>
+                <label class="control-label col-xs-4"></label>
+                <div class="col-xs-8">
+                    <button class="btn btn-success" style="text-transform: uppercase; ">Login</button>
                 </div>
             </div>
         </form>
