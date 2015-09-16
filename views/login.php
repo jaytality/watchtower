@@ -6,7 +6,13 @@
             <div class="form-group">
                 <label for="password" class="control-label col-xs-3">Enter Password: </label>
                 <div class="col-xs-9">
-                    <input type="password" name="password" placeholder="Please enter your password to continue" />
+                    <input type="password" name="password" class="form-control" placeholder="Please enter your password to continue" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-3"></label>
+                <div class="col-xs-9">
+                    <button class="btn btn-success">Login</button>
                 </div>
             </div>
         </form>
